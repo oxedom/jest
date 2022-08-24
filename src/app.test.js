@@ -1,6 +1,4 @@
-// const sum = require('./app.js');
-
-
+const { calculator, capitalize, reverseString } = require('./app.js')
 
 
 //capitalize
@@ -44,7 +42,7 @@ test('calculator subtract 1', () => {
 })
 
 test('calculator subtract 2', () => {
-    expect(calculator.subtract(-5, -5)).toBe(-10);
+    expect(calculator.subtract(-5, -5)).toBe(0);
 })
 
 test('calculator subtract 3', () => {
