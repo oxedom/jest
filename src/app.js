@@ -46,15 +46,15 @@ function stringstoArr(text) {
 function charCode(text, shift = 0) {
     let arrCode = []
     for (let index = 0; index < text.length; index++) {
-        let code = text.charCodeAt(index + shift)
-        arrCode.push(code)
+        let code = text.charCodeAt(index)
+        arrCode.push(code + shift)
     }
 
     return arrCode
 }
 
 function arrCodeStringfy(arr) {
-    var str = String.fromCharCode.apply(...arr);
+    var str = String.fromCharCode.apply(null, arr);
     return str
 }
 
@@ -63,17 +63,20 @@ function arrCodeStringfy(arr) {
 function caesarCipher(text, shift) {
     //Final Anseer
     let answer = undefined
+    let cipherWords = []
     //String to Arr returns an Array with the words split up + the amount of words
     let stingArrObj = stringstoArr(text)
     //A for loop runs with with the lenght of the amount of words and converts each word into a CHAR code
     for (let index = 0; index < stingArrObj.wordCount; index++) {
-        let a = charCode(stingArrObj.arr[index], shift)
-        let b = arrCodeStringfy(a)
-        console.log(b);
+        let wordCoded = charCode(stingArrObj.arr[index], shift)
+        let wordCipher = arrCodeStringfy(wordCoded)
+        cipherWords.push(wordCipher)
     }
+    console.log(cipherWords.split(' '))
+
 
 }
 
-caesarCipher("big ass in newyork", 0)
+caesarCipher("big ass in newyork", 1)
 
 module.exports = { calculator, reverseString, capitalize, caesarCipher };
