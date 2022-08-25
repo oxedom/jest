@@ -1,4 +1,4 @@
-const { calculator, capitalize, reverseString } = require('./app.js')
+const { calculator, capitalize, reverseString, caesarCipher } = require('./app.js')
 
 
 //capitalize
@@ -75,6 +75,26 @@ test('calculator multiply 2', () => {
 test('calculator multiply 3', () => {
     expect(calculator.multiply(-5, -2)).toBe(10);
 })
+
+//caesarCipher 
+test('caesarCipher 1', () => {
+    expect(caesarCipher('face').toBe('gbdf'))
+})
+
+test('caesarCipher 2 ', () => {
+    expect(caesarCipher('the biggest hat in the world').toBe('uif cjhhftu ibu jo uif xpsme'))
+})
+
+test('caesarCipher 3 ', () => {
+    expect(caesarCipher('i live in a big zoo 3').toBe('j mjwf jo b cjh app 3'))
+})
+
+
+test('caesarCipher 4 ', () => {
+    expect(caesarCipher('zzz').toBe('aaa'))
+})
+
+
 
 
 

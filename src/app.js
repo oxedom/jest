@@ -31,4 +31,48 @@ const calculator = {
 
 }
 
-module.exports = { calculator, reverseString, capitalize };
+function stringstoArr(text) {
+    let arr = undefined
+    let wordCount = undefined
+    arr = text.split(" ");
+    wordCount = arr.length
+    // arr = text.split('')
+
+    return { arr, wordCount }
+}
+
+
+
+function charCode(text, shift = 0) {
+    let arrCode = []
+    for (let index = 0; index < text.length; index++) {
+        let code = text.charCodeAt(index + shift)
+        arrCode.push(code)
+    }
+
+    return arrCode
+}
+
+function arrCodeStringfy(arr) {
+    var str = String.fromCharCode.apply(...arr);
+    return str
+}
+
+
+
+function caesarCipher(text, shift) {
+    //Final Anseer
+    let answer = undefined
+    //String to Arr returns an Array with the words split up + the amount of words
+    let stingArrObj = stringstoArr(text)
+
+    for (let index = 0; index < stingArrObj.wordCount; index++) {
+        let a = charCode(stingArrObj.arr[index], shift)
+
+    }
+
+}
+
+caesarCipher("big ass in newyork", 0)
+
+module.exports = { calculator, reverseString, capitalize, caesarCipher };
