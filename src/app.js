@@ -65,10 +65,11 @@ function caesarCipher(text, shift) {
     let answer = undefined
     //String to Arr returns an Array with the words split up + the amount of words
     let stingArrObj = stringstoArr(text)
-
+    //A for loop runs with with the lenght of the amount of words and converts each word into a CHAR code
     for (let index = 0; index < stingArrObj.wordCount; index++) {
         let a = charCode(stingArrObj.arr[index], shift)
-
+        let b = arrCodeStringfy(a)
+        console.log(b);
     }
 
 }
