@@ -86,7 +86,7 @@ test('caesarCipher 2 ', () => {
 })
 
 test('caesarCipher 3 ', () => {
-    expect(caesarCipher('i live in a big zoo 3', 1)).toBe('j mjwf jo b cjh app 3')
+    expect(caesarCipher('i live in a big zoo 3', 1)).toBe('j mjwf jo b cjh app 4')
 })
 
 

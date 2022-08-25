@@ -36,18 +36,30 @@ function stringstoArr(text) {
     let wordCount = undefined
     arr = text.split(" ");
     wordCount = arr.length
-    // arr = text.split('')
 
     return { arr, wordCount }
 }
 
+console.log(stringstoArr('amit is gay 3'))
 
 
 function charCode(text, shift = 0) {
+    let code = undefined
     let arrCode = []
     for (let index = 0; index < text.length; index++) {
-        let code = text.charCodeAt(index)
-        arrCode.push(code + shift)
+        //Z CASE
+        if (text.charCodeAt(index) == 122) {
+            code = 97
+            arrCode.push(code)
+
+        }
+        else {
+            code = text.charCodeAt(index)
+            arrCode.push(code + shift)
+        }
+
+
+
     }
 
     return arrCode
@@ -77,6 +89,6 @@ function caesarCipher(text, shift) {
 
 }
 
-caesarCipher("big ass in newyork", 1)
+caesarCipher("zzz", 1)
 
 module.exports = { calculator, reverseString, capitalize, caesarCipher };
