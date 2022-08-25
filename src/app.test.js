@@ -78,21 +78,23 @@ test('calculator multiply 3', () => {
 
 //caesarCipher 
 test('caesarCipher 1', () => {
-    expect(caesarCipher('face').toBe('gbdf'))
+    expect(caesarCipher('face', 1)).toBe('gbdf')
 })
 
 test('caesarCipher 2 ', () => {
-    expect(caesarCipher('the biggest hat in the world').toBe('uif cjhhftu ibu jo uif xpsme'))
+    expect(caesarCipher('the biggest hat in the world', 1)).toBe('uif cjhhftu ibu jo uif xpsme')
 })
 
 test('caesarCipher 3 ', () => {
-    expect(caesarCipher('i live in a big zoo 3').toBe('j mjwf jo b cjh app 3'))
+    expect(caesarCipher('i live in a big zoo 3', 1)).toBe('j mjwf jo b cjh app 3')
 })
 
 
 test('caesarCipher 4 ', () => {
-    expect(caesarCipher('zzz').toBe('aaa'))
+    expect(caesarCipher('zzz', 1)).toBe('aaa');
 })
+
+
 
 
 

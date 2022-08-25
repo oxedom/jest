@@ -62,7 +62,6 @@ function arrCodeStringfy(arr) {
 
 function caesarCipher(text, shift) {
     //Final Anseer
-    let answer = undefined
     let cipherWords = []
     //String to Arr returns an Array with the words split up + the amount of words
     let stingArrObj = stringstoArr(text)
@@ -72,7 +71,8 @@ function caesarCipher(text, shift) {
         let wordCipher = arrCodeStringfy(wordCoded)
         cipherWords.push(wordCipher)
     }
-    console.log(cipherWords.split(' '))
+    let cipherOutput = cipherWords.join(' ')
+    return cipherOutput
 
 
 }
