@@ -40,7 +40,6 @@ function stringstoArr(text) {
     return { arr, wordCount }
 }
 
-console.log(stringstoArr('amit is gay 3'))
 
 
 function charCode(text, shift = 0) {
@@ -89,6 +88,17 @@ function caesarCipher(text, shift) {
 
 }
 
-caesarCipher("zzz", 1)
+function analyzeArray(arr) {
+    let answerObj = { length: undefined, min: undefined, max: undefined, avg: undefined }
+    answerObj.length = arr.length
+    answerObj.min = Math.min(...arr)
+    answerObj.max = Math.max(...arr)
+    answerObj.avg = arr.reduce((a, b) => a + b, 0) / arr.length
+    answerObj.avg = Math.round(answerObj.avg)
 
-module.exports = { calculator, reverseString, capitalize, caesarCipher };
+    return { ...answerObj }
+
+}
+console.log(analyzeArray([4, 2, 1, 319, 1]))
+
+module.exports = { calculator, reverseString, capitalize, caesarCipher, analyzeArray };
