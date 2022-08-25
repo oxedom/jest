@@ -1,4 +1,4 @@
-const { calculator, capitalize, reverseString, caesarCipher } = require('./app.js')
+const { calculator, capitalize, reverseString, caesarCipher, analyzeArray } = require('./app.js')
 
 
 //capitalize
@@ -95,7 +95,57 @@ test('caesarCipher 4 ', () => {
 })
 
 
+test('analyzeArray 1 ', () => {
+    let arr1 = [1, 5, 6, 10]
+    let result1 =
+    {
+        avg: 5.5,
+        length: 4,
+        min: 1,
+        max: 10
+    }
+    expect(analyzeArray(arr1)).toBe(result1);
+})
 
+test('analyzeArray 2 ', () => {
+
+    let arr2 = [5, 2, 77, 23, 30]
+    let result2 =
+    {
+        avg: 27.4,
+        length: 5,
+        min: 2,
+        max: 77
+    }
+    expect(analyzeArray(arr2)).toBe(result2);
+})
+
+test('analyzeArray 3 ', () => {
+
+    let arr3 = [10, 99, 20, 32, 1]
+    let result3 =
+    {
+        avg: 32.4,
+        length: 5,
+        min: 1,
+        max: 99
+    }
+
+    expect(analyzeArray(arr3)).toBe(result3);
+})
+
+test('analyzeArray 4 ', () => {
+    let arr4 = [55, 10, 20, 33, 12, 88, 33]
+    let result4 =
+    {
+        avg: 35.8571,
+        length: 7,
+        min: 10,
+        max: 88
+    }
+
+    expect(analyzeArray(arr4)).toBe(result4);
+})
 
 
 
